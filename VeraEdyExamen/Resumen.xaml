@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VeraEdyExamen.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+             <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+            <Label Text="Pantalla Resumen" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+             </Frame>
+
+            <Label Text="Usuario Conectado:" FontSize="15"></Label>
+            <Label x:Name="lbluser" FontSize="20" TextColor="Red" HorizontalOptions="Center"></Label>
+
+
+             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                  
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  
+                    <ColumnDefinition Width="Auto" />                   
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre y Apellido:" />               
+                <Entry x:Name="lblnombre" Grid.Row="0" Grid.Column="1" IsEnabled="False" Text="" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Cuota mensual:" />               
+                <Entry x:Name="lblcuota" Grid.Row="1" Grid.Column="1" IsEnabled="False" Text="" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Total a pagar:" />               
+                <Entry x:Name="txttotal" Grid.Row="2" Grid.Column="1"  IsEnabled="False" Text=""/>
+
+                 
+
+        </Grid>
+
+         </StackLayout>
+
+   
+    </ContentPage.Content>
+</ContentPage>

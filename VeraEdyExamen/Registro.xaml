@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VeraEdyExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+
+             <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+            <Label Text="Pantalla Registro" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+             </Frame>
+
+            <Label Text="BIENVENIDO:" FontSize="15"></Label>
+            <Label x:Name="lbluser" FontSize="20" TextColor="Red" HorizontalOptions="Center"></Label>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                  
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  
+                    <ColumnDefinition Width="Auto" />                   
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Ingrese su Nombre y Apellido:" />               
+                <Entry x:Name="txtnombre" Grid.Row="0" Grid.Column="1" Text="" />
+                
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Ingrese Monto Inicial a pagar:" />               
+                <Entry x:Name="txtmontoi" Grid.Row="1" Grid.Column="1" Text="" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Su cuota mensual es:" />               
+                <Entry x:Name="txtcuota" Grid.Row="2" Grid.Column="1"  IsEnabled="False" Text=""/>
+
+                              
+                <Entry x:Name="txttotal" IsVisible="false" IsEnabled="False" Text=""/>
+
+
+                <Button Grid.Row="3" Grid.Column="1"
+                x:Name="btn_calcular"
+                Text="Calcular"
+                BackgroundColor="LightPink"
+                TextColor="Black"
+                CornerRadius="60"
+                HorizontalOptions="Center"
+                Clicked="btn_calcular_Clicked">
+
+        </Button>
+
+                <Button Grid.Row="4" Grid.Column="1"
+                x:Name="btnabrir_resumen"
+                Text="Guardar"
+                BackgroundColor="LightGreen"
+                TextColor="Black"
+                CornerRadius="60"
+                HorizontalOptions="Center"
+                Clicked="btnabrir_resumen_Clicked">
+
+        </Button>
+
+               
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
